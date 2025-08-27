@@ -29,6 +29,7 @@ public class TestBase {
         return driver.findElements(locator).size()>0;
     }
 
+
     public boolean isHomeComponentPresent(){
         return isElementPresent(By.cssSelector("div:nth-child(2)>div>div>h1"));
     }
