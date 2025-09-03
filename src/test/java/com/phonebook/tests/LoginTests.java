@@ -7,16 +7,16 @@ public class LoginTests extends TestBase{
 
     @Test
     public void loginPositiveTest(){
-        clickOnLoginLink();
-        fillRegisterLoginForm(new User().setEmail("tati123@gmail.com").setPassword( "Tati123!"));
-        clickOnLoginButton();
-        Assert.assertTrue(isSignOutPresent());
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillRegisterLoginForm(new User().setEmail("tati123@gmail.com").setPassword( "Tati123!"));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isSignOutPresent());
     }
     @Test
     public void loginNegativeWithoutEmailTest(){
-        clickOnLoginLink();
-        fillRegisterLoginForm(new User().setPassword("Tati123!"));
-        clickOnLoginButton();
-        Assert.assertTrue(isAlertDisplayed());
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillRegisterLoginForm(new User().setPassword("Tati123!"));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isAlertDisplayed());
     }
 }
