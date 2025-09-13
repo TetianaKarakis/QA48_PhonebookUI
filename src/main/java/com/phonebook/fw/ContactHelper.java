@@ -1,12 +1,13 @@
-package com.phonebook.tests;
+package com.phonebook.fw;
 
+import com.phonebook.models.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class ContactHelper extends BaseHelper{
+public class ContactHelper extends BaseHelper {
     public ContactHelper(WebDriver driver) {
         super(driver);
     }
