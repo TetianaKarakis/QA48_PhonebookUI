@@ -23,6 +23,7 @@ public class LoginTests extends TestBase{
     }
     @Test (priority = 2)
     public void loginNegativeWithoutEmailTest(){
+        logger.info("Login with data -->" + UserData.EMAIL +  "*****" + UserData.PASSWORD);
         app.getUser().clickOnLoginLink();
         app.getUser().fillRegisterLoginForm(new User().setPassword(UserData.PASSWORD));
         app.getUser().clickOnLoginButton();

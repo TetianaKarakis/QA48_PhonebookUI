@@ -33,21 +33,29 @@ public class MyListener implements WebDriverListener {
     @Override
     public void beforeFindElement(WebDriver driver, By locator) {
         WebDriverListener.super.beforeFindElement(driver, locator);
+        logger.info("The loger wiil find" +locator);
+        logger.info("****************************");
     }
 
     @Override
     public void afterFindElement(WebDriver driver, By locator, WebElement result) {
         WebDriverListener.super.afterFindElement(driver, locator, result);
+        logger.info("The locator is" +locator);
+        logger.info("****************************");
     }
 
     @Override
     public void beforeFindElements(WebDriver driver, By locator) {
         WebDriverListener.super.beforeFindElements(driver, locator);
+        logger.info("Befor find elements" + locator);
+        logger.info("****************************");
     }
 
     @Override
     public void afterFindElements(WebDriver driver, By locator, List<WebElement> result) {
         WebDriverListener.super.afterFindElements(driver, locator, result);
+        logger.info("List size is" +result.size());
+        logger.info("****************************");
     }
 
     @Override
@@ -58,5 +66,7 @@ public class MyListener implements WebDriverListener {
     @Override
     public void afterQuit(WebDriver driver) {
         WebDriverListener.super.afterQuit(driver);
+
+        logger.info("****************************");
     }
 }
